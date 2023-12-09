@@ -64,10 +64,12 @@ const Ejercicio05 = () => {
     }
 }
   const limpiar = () => {
-
-  setPalabra('');
-  setResultado('');
+    setPalabra('');
+    setResultado('');
+    const resultadoElement = document.querySelector('#resultado');
+    resultadoElement.className = ''; // Limpiar las clases al limpiar
   }
+  
   return (
     <div className = 'max-w-2xl mx-auto mt-12 bg px-4 py-0 sm:px-6 lg:px-8'>
       <h1 className = 'text-center font-bold'>DFA que acepta todas las cadenas sobre "a, b" donde no acepte la cadena "aabb"</h1>
