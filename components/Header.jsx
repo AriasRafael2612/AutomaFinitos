@@ -12,27 +12,27 @@ const Header = () => {
         <nav className="space-x-4">
           <ul className="flex flex-col md:flex-row md:items-center md:justify-evenly uppercase">
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/'>Inicio</Link>
             </li>
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/ejercicio01'>Ejercicio 01</Link>
             </li>
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/ejercicio02'>Ejercicio 02</Link>
             </li>
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/ejercicio03'>Ejercicio 03</Link>
             </li>
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/ejercicio04'>Ejercicio 04</Link>
             </li>
 
-            <li className='hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
+            <li className='text-blue-500 hover:scale-110 transition duration-300 py-1 hover:text-teal-400'>
               <Link href='/ejercicio05'>Ejercicio 05</Link>
             </li>
 
