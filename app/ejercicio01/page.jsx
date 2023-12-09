@@ -16,6 +16,8 @@ const Ejercicio01 = () => {
     let estado = 0;
     let caracter = 0;
 
+    const resultado = document.querySelector('#resultado');
+
     const isLetter = new RegExp('[a-zA-Z]');
     const isDigit = new RegExp('[0-9]');
 
@@ -29,19 +31,23 @@ const Ejercicio01 = () => {
       }
       estado = matriz[estado][caracter];
       if (estado === 200) {
-        setResultado('palabra invalida');
-        return;
+        setResultado('palabra invalida')
+        resultado.className = 'mt-5 p-3 bg-red-500 text-center font-bold text-white uppercase rounded';
+        return
       }
       i++;
     }
     if (estado === 1) {
-      setResultado('palabra aceptada');
+      setResultado('palabra aceptada')
+      resultado.className = 'mt-5 p-3 mb-5 bg-green-800 text-center font-bold text-white uppercase rounded';
     }
   };
 
   const limpiar = () => {
     setPalabra('');
     setResultado('');
+    const resultadoElement = document.querySelector('#resultado');
+    resultadoElement.className = ''; // Limpiar las clases al limpiar
   };
 
   return (
@@ -77,18 +83,8 @@ const Ejercicio01 = () => {
           </button>
         </div>
       </div>
-      <div className='mt-3' id='resultado'>
-        {resultado && (
-          <div
-            className={`p-3 ${
-              resultado === 'palabra aceptada'
-                ? 'bg-green-800 text-center font-bold text-white uppercase rounded'
-                : 'bg-red-500 text-center font-bold text-white uppercase rounded'
-            }`}
-          >
-            {resultado}
-          </div>
-        )}
+      <div id = "resultado">
+        {resultado}
       </div>
     </div>
   );
