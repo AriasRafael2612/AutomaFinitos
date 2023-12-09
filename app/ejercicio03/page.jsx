@@ -17,6 +17,8 @@ const Ejercicio03 = () => {
     let estado = 0;
     let caracter = 0;
 
+    const resultado = document.querySelector('#resultado');
+
     while (i < c.length) {
       if (c[i] === 'a') {
         caracter = 0;
@@ -29,23 +31,28 @@ const Ejercicio03 = () => {
       estado = matriz[estado][caracter];
 
       if (estado === 200) {
-        setResultado('palabra invalida');
-        return;
+        setResultado('palabra invalida')
+            resultado.className = 'mt-5 p-3 bg-red-500 text-center font-bold text-white uppercase rounded';
+            return
       }
 
       i++;
     }
 
     if (estado === 0) {
-      setResultado('palabra aceptada');
+      setResultado('palabra aceptada')
+      resultado.className = 'mt-5 p-3 mb-5 bg-green-800 text-center font-bold text-white uppercase rounded';
     } else {
-      setResultado('palabra invalida');
+      setResultado('palabra invalida')
+      resultado.className = 'mt-5 p-3 bg-red-500 text-center font-bold text-white uppercase rounded';
     }
   };
 
   const limpiar = () => {
     setPalabra('');
     setResultado('');
+    const resultadoElement = document.querySelector('#resultado');
+    resultadoElement.className = ''; // Limpiar las clases al limpiar
   };
 
   return (
@@ -80,21 +87,17 @@ const Ejercicio03 = () => {
           <button
             onClick={limpiar}
             className='flex-1  mr-2 bg-teal-400 p-3 uppercase font-bold cursor-pointer rounded hover:bg-teal-600'
-          >
+          >  
             Limpiar
           </button>
-        </div>
+        </div> 
       </div>
 
-      <div id='resultado' className='mt-5 p-3 text-center font-bold uppercase rounded'>
-        {resultado && (
-          <div className={`${resultado === 'palabra aceptada' ? 'bg-green-800' : 'bg-red-800'} text-white`}>
-            {resultado}
-          </div>
-        )}
+      <div id = "resultado">
+        {resultado}
       </div>
     </div>
-    /* eslint-enable react/jsx-filename-extension */
+    
   );
 };
 
