@@ -46,7 +46,7 @@ const Ejercicio04 = () => {
             caracter = 2;
         }
         estado = matriz[estado][caracter]
-        console.log(estado)
+        // console.log(estado)
         if (estado === 200) {
             setResultado('palabra invalida')
             resultado.className = 'mt-5 p-3 bg-red-500 text-center font-bold text-white uppercase rounded';
@@ -63,9 +63,10 @@ const Ejercicio04 = () => {
     }
 }
   const limpiar = () => {
-
-  setPalabra('');
-  setResultado('');
+    setPalabra('');
+    setResultado('');
+    const resultadoElement = document.querySelector('#resultado');
+    resultadoElement.className = ''; // Limpiar las clases al limpiar
   }
   return (
     <div className = 'max-w-2xl mx-auto mt-12 bg px-4 py-0 sm:px-6 lg:px-8'>
